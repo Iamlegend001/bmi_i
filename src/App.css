@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+/* Reset and Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'verdana', sans-serif;
+  font-synthesis: style;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1c1c1e;
+  padding: 20px;
+  color: #f5f5f7;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main Card Container */
+main {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  background-color: #2c2c2e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+  text-align: center;
+  color: #f5f5f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Heading */
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #f5f5f7;
+}
+
+/* Input Section */
+.input_section {
+  margin-bottom: 25px;
+}
+
+.slider-output {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b0b0b0;
+  margin: 15px 0 8px;
+}
+
+/* Custom Slider */
+.input-slider {
+  width: 100%;
+  height: 8px;
+  appearance: none;
+  background: #3a3a3c;
+  border-radius: 10px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.input-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #007aff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.input-slider::-webkit-slider-thumb:hover {
+  background: #34c759;
+  transform: scale(1.1);
+}
+
+/* Output Section */
+.output-section {
+  margin-top: 20px;
+}
+
+.output-section p {
+  font-size: 20px;
+  color: #f5f5f7;
+}
+
+.output {
+  font-size: 28px;
+  font-weight: 600;
+  color: #34c759;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+  main {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .slider-output, .output-section p {
+    font-size: 16px;
+  }
+
+  .output {
+    font-size: 24px;
   }
 }
